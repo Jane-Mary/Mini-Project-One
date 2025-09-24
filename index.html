@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+
+        <div class="task-input-section">
+            <form id="task-form" class="task-form">
+                <div class="form-row">
+                    <input type="text" id="task-title" placeholder="Enter task title" required>
+                    <input type="text" id="task-description" placeholder="Enter task description">
+                </div>
+                <div class="form-row">
+                    <select id="task-priority" required>
+                        <option value="">Select Priority</option>
+                        <option value="high">High Priority</option>
+                        <option value="medium">Medium Priority</option>
+                        <option value="low">Low Priority</option>
+                    </select>
+                    <input type="date" id="task-due-date" required>
+                </div>
+                <button type="submit" class="add-task-btn">Add Task</button>
+            </form>
+        </div>
+
+        <div class="controls-section">
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search tasks...">
+                <button id="search-btn">Search</button>
+            </div>
+            
+            <div class="filters-container">
+                <select id="priority-filter">
+                    <option value="">All Priorities</option>
+                    <option value="high">High Priority</option>
+                    <option value="medium">Medium Priority</option>
+                    <option value="low">Low Priority</option>
+                </select>
+                
+                <select id="status-filter">
+                    <option value="">All Status</option>
+                    <option value="completed">Completed</option>
+                    <option value="pending">Not Completed</option>
+                </select>
+                
+                <select id="date-filter">
+                    <option value="">All Dates</option>
+                    <option value="today">Due Today</option>
+                    <option value="week">Due This Week</option>
+                    <option value="overdue">Overdue</option>
+                </select>
+                
+                <button id="clear-filters">Clear Filters</button>
+            </div>
+        </div>
+
+        <div class="tasks-section">
+            <div class="tasks-header">
+                <h2>Your Tasks</h2>
+                <span id="task-count">0 tasks</span>
+            </div>
+            <div id="tasks-container" class="tasks-container">
+                <!-- Tasks will be dynamically added here -->
+            </div>
+            <div id="no-tasks" class="no-tasks" style="display: none;">
+                <p>No tasks found. Add your first task above!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
