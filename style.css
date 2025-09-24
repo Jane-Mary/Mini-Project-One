@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background:#3498db;
+    background:whitesmoke;
     min-height: 100vh;
     color: #333;
 }
@@ -22,7 +21,7 @@ body {
 header {
     text-align: center;
     margin-bottom: 30px;
-    color: white;
+    color: black;
 }
 
 header h1 {
@@ -39,7 +38,7 @@ header p {
 
 /* Task Input Section */
 .task-input-section {
-    background: white;
+    background: #3498db;
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
@@ -64,7 +63,7 @@ header p {
     flex: 1;
     min-width: 200px;
     padding: 12px 15px;
-    border: 2px solid #e0e0e0;
+    border:none;
     border-radius: 10px;
     font-size: 1rem;
     font-family: 'Roboto', sans-serif;
@@ -79,8 +78,8 @@ header p {
 }
 
 .add-task-btn {
-    background: #3498db;
-    color: white;
+    background: white;
+    color: black;
     border: none;
     padding: 15px 30px;
     border-radius: 10px;
@@ -88,13 +87,14 @@ header p {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.3s ease;
-    align-self: flex-start;
+    align-self: flex-end;
 }
 
 .add-task-btn:hover {
-    background: #2980b9;
+    background: #00497a;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    color:white;
 }
 
 /* Controls Section */
@@ -157,10 +157,7 @@ header p {
 /* Tasks Section */
 .tasks-section {
     background: white;
-    border-radius: 15px;
-    padding: 25px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    animation: slideInUp 0.5s ease-out 0.2s both;
+    margin-top: 2rem;
 }
 
 .tasks-header {
@@ -187,8 +184,10 @@ header p {
 }
 
 .tasks-container {
-    display: grid;
-    gap: 15px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content:center;
 }
 
 /* Task Card Styles */
@@ -196,7 +195,7 @@ header p {
     background: #f8f9fa;
     border: 2px solid #e9ecef;
     border-radius: 15px;
-    padding: 20px;
+    padding: 30px;
     transition: all 0.3s ease;
     animation: slideInUp 0.4s ease-out;
     position: relative;
@@ -261,7 +260,7 @@ header p {
 }
 
 .task-priority.medium {
-    background: #ffa726;
+    background: #f1a026;
     color: white;
 }
 
@@ -296,7 +295,7 @@ header p {
 }
 
 .complete-btn {
-    background: #28a745;
+    background:#3498db;
     color: white;
 }
 
